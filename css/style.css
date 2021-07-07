@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+body{
+    background-color: rgb(221, 218, 218);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(138, 138, 255);
+    z-index: 100;
+
+}
+
+.header{
+    position: relative;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-left: 40px;
+}
+
+.interations{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    transition: .3s;
+}
+
+.interations a{
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.interations input{
+    width: 250px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-image: url(../img/lupa.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 30px;
+}
+
+
+
+.container{
+    position: relative;
+    top: 100px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 30px;  
+    height: auto; 
+}
+
+.menu-btn{
+    width: 40px;
+    height: 35px;
+    border-radius: 2px;
+    display: none;
+    background: rgb(138, 138, 255) url(../img/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .3s;
+
+}
+
+
+@media (max-width: 1100px) {
+    .container{
+        grid-template: 1fr / 1fr 1fr;
+    }
+
+    .logo{
+        font-size: 1.1rem;
+        margin-left: 15px;
+    }
+
+    .interations{
+        gap: 20px;
+    }
+
+    .interations a{
+        font-size: 12px;
+    }
+
+    .header{
+        width: 98%;
+    }
+}
+
+@media (max-width: 850px) {
+    .interations a{
+        display: none;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 1000;
+    }
+
+    .interations.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .interations.active a{
+        display: block;
+        margin: 10px;
+        font-size: 1.3rem;
+        padding: 15px;
+        border-radius: 25px;
+        color: white;
+        font-weight: bold;
+        line-height: 10px;
+    }
+
+    .interations.active a:hover{
+        background-color: rgb(138, 138, 255);
+    }
+
+    .interations.active input{
+        display: none;
+    }
+
+    .menu-btn.active{
+        background: rgb(138, 138, 255) url(../img/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media (max-width: 750px) {
+    .container{
+        grid-template: 1fr / 1fr;
+    }
+}
+
+
+.news{
+    width: 330px;
+    height: 360px;
+    border-radius: 5px;
+    padding: 20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+    color: black;
+}
+
+.news h1{
+    margin-bottom: 40px;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.news p{
+    max-width: 95%;
+    font-size: 16px;
+}
+
+
+.news button{
+    width: 75%;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background-color: rgb(138, 138, 255);
+}
+
+.news button:hover{
+    background-color: rgb(107, 107, 223);
+    cursor: pointer;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(138, 138, 255);
+    margin-top: 120px;
+}
+
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    line-height: 40px;
+    font-weight: 900;
+}

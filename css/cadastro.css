@@ -1,0 +1,105 @@
+main{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content{
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    height: 300px;
+    width: 900px;
+    margin-left: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 5px; 
+}
+
+@media(max-width: 920px) {
+    .content {
+        width: 700px;
+    }
+}
+
+@media(max-width: 750px){
+    .content {
+        width: 490px;
+        margin-left: 0;
+    }
+}
+
+.content h1{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.content input[type = text], select{
+    display: block;
+    width: 95%;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-bottom: 3px solid powderblue;
+    outline: none;
+}
+
+.buttons{
+    align-self: flex-end;
+    margin-right: 40px;
+}
+
+.buttons input{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.salvar{
+    background-color: rgb(65, 65, 238);
+    color: white;
+    border: 1px solid white;
+    transition: .4s;
+}
+.salvar:hover, #atualizar:hover{
+    background: rgb(33, 33, 173);
+}
+
+
+.voltar{
+    background-color: rgb(241, 241, 241);
+    color: rgb(65, 65, 238);
+    border: 1px solid rgb(65, 65, 238);
+    transition: .4s;
+}
+
+.voltar:hover{
+    background-color: rgb(221, 215, 215);
+}
+
+
+
+#excluir{
+    background-color: rgb(245, 46, 46);
+    color: white;
+    border: 1px solid red;
+    transition: .4s;
+}
+
+#excluir:hover{
+    background-color: rgb(167, 32, 32);
+}
+
+#atualizar{
+    color: rgb(241, 241, 241);
+    border: 1px solid rgb(65, 65, 238);
+    background-color: rgb(65, 65, 238);
+    transition: .4s;
+}

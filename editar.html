@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>Editar de notícias</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">LOGO</div>
+            <div class="interations">
+                <a href="index.html">HOME</a>
+                <a href="cadastro.html">CADASTRAR NOTÍCIA</a>
+                <a href="categoria.html">CADASTRAR CATEGORIA</a>
+            </div>
+            <div class="menu-btn"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+
+                <h1>Editar de notícias</h1>
+
+                <form method="POST">
+                    <input type="text" placeholder="Título da notícia" id="editInputTitle">
+                    <select id="editSelect">
+                        <option selected disabled value="">Categoria</option>
+
+                    </select>
+                    <input type="text" placeholder="Conteúdo da notícia" id="editInputNews">
+                    <div class="buttons">
+                        <input type="button" value="excluir" id="excluir" onclick="deleteNews()">
+                        <input type="button" value="atualizar" id="atualizar" onclick="updateNews()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+
+    <footer>
+        <div class="footer">
+            CREATE FROM JOÃO PEDRO
+        </div>
+    </footer>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        let select = document.getElementById('editSelect')
+        loadedategories(select)
+
+        loadedEditRemove()
+
+
+        const menuToggle = document.querySelector('.menu-btn')
+        const navigation = document.querySelector('.interations')
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+        
+    </script>
+</body>
+</html>
